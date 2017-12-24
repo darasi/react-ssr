@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
 const Header = () =>
-  <header className="header">Header</header>
+  <header className="header">HEADER</header>
 
 export default Header;
