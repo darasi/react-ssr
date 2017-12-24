@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Page from '../containers/Page';
 import '../assets/css/my.scss'
+import '../assets/css/index.scss'
 
 class Home extends Component {
   state = {
@@ -24,13 +25,13 @@ class Home extends Component {
   render(){
     let { add,count,homeInfo:{ name,age } } = this.props;
     return [
-      <div>
+      <div key="Header">
         <p>{ count }</p>
         <p>nnnn：{name} - neaeaea：{age}</p>
         <button style={{backgroundColor:'#eee'}} onClick={()=>add(count + 1)}>ADD</button>
         <Link to='/user'>User</Link>
       </div>,
-      <Page/> 
+      <Page key="Page"/> 
     ];
   }
 }
