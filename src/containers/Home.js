@@ -5,6 +5,7 @@ import * as actions  from '../store/actions/home';
 import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Page from '../containers/Page';
+import Header from '../components/Header';
 import '../assets/css/my.scss'
 import '../assets/css/index.scss'
 
@@ -25,13 +26,14 @@ class Home extends Component {
   render(){
     let { add,count,homeInfo:{ name,age } } = this.props;
     return [
-      <div key="Header">
+      <Header key="Header" />,
+      <div key="h">
         <p>{ count }</p>
         <p>nnnn：{name} - neaeaea：{age}</p>
         <button style={{backgroundColor:'#eee'}} onClick={()=>add(count + 1)}>ADD</button>
         <Link to='/user'>User</Link>
       </div>,
-      <Page key="Page"/> 
+      <Page key="Page" /> 
     ];
   }
 }
