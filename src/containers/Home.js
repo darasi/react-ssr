@@ -18,19 +18,20 @@ class Home extends Component {
 
   componentDidCatch(error, info) {
     this.setState({ hasError: true });
-    console.log('error':error,info)
+    console.log('error',error,info)
   }
 
   render(){
     let { add,count,homeInfo:{ name,age } } = this.props;
-    return (
+    return [
       <div>
         <p>{ count }</p>
         <p>nnnn：{name} - neaeaea：{age}</p>
         <button style={{backgroundColor:'#eee'}} onClick={()=>add(count + 1)}>ADD</button>
         <Link to='/user'>User</Link>
-      </div>
-    )
+      </div>,
+      <Page/> 
+    ];
   }
 }
 
