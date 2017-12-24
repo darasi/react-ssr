@@ -10,10 +10,12 @@ const Loading = (props) => {
 const LoadableHome = Loadable({
   loader: () => import(/* webpackChunkName: 'Home' */'../../containers/Home'),
   loading: Loading,
+  delay: 10
 });
 const LoadableUser = Loadable({
   loader: () => import(/* webpackChunkName: 'User' */'../../containers/User'),
   loading: Loading,
+  delay: 10
 });
 
 const routesConfig = [{
