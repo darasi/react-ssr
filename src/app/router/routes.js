@@ -4,9 +4,14 @@ import { homeThunk } from '../../store/actions/thunk';
 
 const Loading = (props) => {
   console.log(props)
-  return <div>Loading...</div>
+  return <div>LOADING...</div>
 }
 
+const LoadableHomePage = Loadable({
+  loader: () => import(/* webpackChunkName: 'HomePage' */'../../containers/HomePage'),
+  loading: Loading,
+  delay: 10
+});
 const LoadableHome = Loadable({
   loader: () => import(/* webpackChunkName: 'Home' */'../../containers/Home'),
   loading: Loading,
@@ -21,6 +26,10 @@ const LoadableUser = Loadable({
 const routesConfig = [{
   path: '/',
   exact: true,
+  component: LoadableHomePage,
+  thunk: () => {},
+}, {
+  path: '/thunk',
   component: LoadableHome,
   thunk: homeThunk,
 }, {

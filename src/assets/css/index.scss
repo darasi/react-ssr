@@ -1,6 +1,10 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-web-001-caps/css/bpg-web-001-caps.min.css");
+
+$fontFam: Lato,'Helvetica Neue',"BPG WEB 001 Caps",Arial,Helvetica,sans-serif;
+$fontSize: 1.2rem;
+
+
 body {
-  font-size: 20px;
-}
-div#root {
-  padding: 3rem;
+  font-size: $fontSize;
+  font-family: $fontFam;
 }

@@ -1,6 +1,77 @@
-div{
-    color:red;
+$white: #fff;
+$fontFam: Lato,'Helvetica Neue',"BPG WEB 001 Caps",Arial,Helvetica,sans-serif;
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 header.header {
-    text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  left: 0;
+  padding: 2rem 0rem;
+  width: 100%;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+
+  &.fixed {
+    padding: 0.2rem 0;
+    background: -moz-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
+    background: -ms-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
+    background: -webkit-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
+    opacity: .9;
+    box-shadow: 0 0 20px -4px rgba(0,0,0,.8);
+  }
+  .header-menu {
+    background: transparent;
+
+    .item a {
+      cursor: pointer;
+      opacity: .95;
+      color: $white;
+      font-family: $fontFam;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      padding: 5px 10px;
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease;
+
+      &:hover, &.active {
+        background: #fff;
+        color: #bf095d!important
+      }
+    }
+  }
+}
+.hero {
+  height: 1000px;
+  position: relative;
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -moz-linear-gradient(-29deg,#c10f41 0,#233b88 100%);
+    background: -ms-linear-gradient(-29deg,#c10f41 0,#233b88 100%);
+    background: -webkit-linear-gradient(-29deg,#c10f41 0,#233b88 100%);
+    opacity: .9;
+  }
+}
+.services {
+  height: 1000px;
+  padding: 100px 0;
+  background: #f3f3f3;
 }
