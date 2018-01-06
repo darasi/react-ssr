@@ -25,7 +25,7 @@ class Header extends Component {
   render() {
     return <header className="header" id="header">
             <Container>
-              <Menu secondary stackable floated="right" className="header-menu">
+              <Menu secondary floated="right" className="header-menu">
                 {this.props.headerMenu.map((item, index) => (
                   <Menu.Item key={index} name={item.title}>
                     <ScrollLink 

@@ -9,6 +9,7 @@ import { Link as ScrollLink, DirectLink, Element , Events, animateScroll as scro
 import Header from '../components/Header';
 import SectionHero from '../components/SectionHero';
 import SectionServices from '../components/SectionServices';
+import SectionContact from '../components/SectionContact';
 import '../assets/css/my.scss'
 import '../assets/css/index.scss'
 
@@ -71,7 +72,11 @@ class HomePage extends Component {
       </Element>,
       <Element key="SectionServices" name="SectionServices" id="SectionServices">
         <SectionServices />
-      </Element>
+      </Element>,
+      <Element key="SectionContact" name="SectionContact" id="SectionContact">
+        <SectionContact />
+      </Element>,
+      <footer key="Footer">Copyright © 2017 Melon</footer>
     ];
   }
 }

@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import { Grid, Segment } from 'semantic-ui-react';
+import { Container, Grid, Segment, Header } from 'semantic-ui-react';
 
 const SectionServices = () =>
   <section className="services">
     <div className="overlay"></div>
-    <Grid container stackable columns={3}>
-      <Grid.Column>
-        <Segment>
-          SEGMENT
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment>
-          SEGMENT 2
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment>
-          SEGMENT 3
-        </Segment>
-      </Grid.Column>
-    </Grid>
+    <Container>
+      <Header as='h2' textAlign='center' className="section-header">
+        სერვისები
+        <div className="headline"></div>
+      </Header>
+      <Grid stackable columns={3}>
+        <Grid.Column className="wow fadeInUp" data-wow-duration="1s">
+          <Segment>
+            SEGMENT
+          </Segment>
+        </Grid.Column>
+        <Grid.Column className="wow fadeInUp" data-wow-duration="1s">
+          <Segment>
+            SEGMENT 2
+          </Segment>
+        </Grid.Column>
+        <Grid.Column className="wow fadeInUp" data-wow-duration="1s">
+          <Segment>
+            SEGMENT 3
+          </Segment>
+        </Grid.Column>
+      </Grid>
+    </Container>
   </section>
 
 export default SectionServices;
