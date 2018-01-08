@@ -69,11 +69,37 @@ header.header {
     background: -webkit-linear-gradient(-29deg,#c10f41 0,#233b88 100%);
     opacity: .9;
   }
+
+  .container {
+    padding: 15rem 2rem 0;
+  }
+  h1 {
+    padding-top: 2rem !important;
+    color: $white !important;
+    font-family: $fontFam !important;
+    font-size: 2.2rem !important;
+    font-weight: normal !important;
+  }
+  h3 {
+    color: $white !important;
+    font-family: $fontFam !important;
+    font-weight: normal !important;
+  }
 }
 .services {
   min-height: 100vh;
   padding: 100px 0;
   background: #f3f3f3;
+
+  h4 {
+    font-family: $fontFam !important;
+    font-size: 1.2rem !important;
+    color: #242628 !important;
+  }
+  p {
+    color: #5d6265;
+    font-size: 0.9rem;
+  }
 }
 section.contact {
   min-height: 100vh;
