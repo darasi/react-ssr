@@ -91,7 +91,7 @@ const prodConfig={
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      title:'UCOMP.GE',
+      title:'',
       filename:'index.html',
       template:'./index.ejs',
     }),

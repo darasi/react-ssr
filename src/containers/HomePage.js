@@ -1,17 +1,26 @@
 import React,{ Component } from 'react';
+import {Helmet} from "react-helmet";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions  from '../store/actions/home';
 import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
-import { Link as ScrollLink, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
+import { 
+  Link as ScrollLink,
+  DirectLink, 
+  Element, 
+  Events, 
+  animateScroll as scroll, 
+  scrollSpy, 
+  scroller 
+} from 'react-scroll';
 import Header from '../components/Header';
 import SectionHero from '../components/SectionHero';
 import SectionServices from '../components/SectionServices';
 import SectionContact from '../components/SectionContact';
-import '../assets/css/my.scss'
-import '../assets/css/index.scss'
+import '../assets/css/my.scss';
+import '../assets/css/index.scss';
+import '../assets/css/loader.scss';
 
 class HomePage extends Component {
 
@@ -66,6 +75,9 @@ class HomePage extends Component {
 
   render() {
     return [
+      <Helmet key="Helmet">
+        <title>UCOMP.GE</title>
+      </Helmet>,
       <Header key="Header" headerMenu={this.state.headerMenu}/>,
       <Element key="SectionHero" name="SectionHero" id="SectionHero">
         <SectionHero  />

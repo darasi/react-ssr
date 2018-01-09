@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Container, Menu, Responsive, Icon } from 'semantic-ui-react';
 import { Link as ScrollLink } from 'react-scroll';
 
 class Header extends Component {
@@ -17,27 +18,29 @@ class Header extends Component {
 
   constructor(props) {
     super(props);
-    // this.state = {
-    //   color: props.initialColor
-    // };
   }
 
   render() {
     return <header className="header" id="header">
             <Container>
-              <Menu secondary floated="right" className="header-menu">
-                {this.props.headerMenu.map((item, index) => (
-                  <Menu.Item key={index} name={item.title}>
-                    <ScrollLink 
-                      activeClass="active"
-                      to={item.section}
-                      spy={true} 
-                      smooth={true} 
-                      hashSpy={true} 
-                      duration={500}>{item.title}
-                    </ScrollLink>
-                  </Menu.Item>
-                ))}
+              <Menu secondary className="header-menu">
+                <Menu.Item>
+                  <Link to='/'>UCOMP</Link> 
+                </Menu.Item>
+                <Menu.Menu position='right'>
+                  {this.props.headerMenu.map((item, index) => (
+                    <Responsive as={Menu.Item} minWidth={768} key={index} name={item.title}>
+                      <ScrollLink 
+                        activeClass="active"
+                        to={item.section}
+                        spy={true} 
+                        smooth={true} 
+                        hashSpy={true} 
+                        duration={500}>{item.title}
+                      </ScrollLink>
+                    </Responsive>
+                  ))}
+                </Menu.Menu>
               </Menu>
             </Container>
           </header>
