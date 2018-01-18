@@ -21,7 +21,6 @@ import SectionContact from '../components/SectionContact';
 import '../assets/css/my.scss';
 import '../assets/css/index.scss';
 import '../assets/css/loader.scss';
-import logo_fb from '../assets/img/ucomp_logo_fb.png';
 
 class HomePage extends Component {
 
@@ -78,7 +77,6 @@ class HomePage extends Component {
     return [
       <Helmet key="Helmet">
         <title>UCOMP.GE</title>
-        <meta property="og:image" content={logo_fb} />
       </Helmet>,
       <Header key="Header" headerMenu={this.state.headerMenu}/>,
       <Element key="SectionHero" name="SectionHero" id="SectionHero">
