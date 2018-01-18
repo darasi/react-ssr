@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Menu, Responsive, Icon } from 'semantic-ui-react';
+import { Container, Menu, Responsive, Icon, Image } from 'semantic-ui-react';
 import { Link as ScrollLink } from 'react-scroll';
+import logo from '../assets/img/ucomp_logo.png';
 
 class Header extends Component {
 
@@ -24,8 +25,8 @@ class Header extends Component {
     return <header className="header" id="header">
             <Container>
               <Menu secondary className="header-menu">
-                <Menu.Item>
-                  <Link to='/'>UCOMP</Link> 
+                <Menu.Item className="header-logo">
+                  <Link to='/'><Image src={logo} centered /></Link> 
                 </Menu.Item>
                 <Menu.Menu position='right'>
                   {this.props.headerMenu.map((item, index) => (

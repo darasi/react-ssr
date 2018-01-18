@@ -29,6 +29,16 @@ header.header {
   .header-menu {
     background: transparent;
 
+    .item.header-logo {
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: $white;
+
+      img {
+        height: 35px;
+      }
+    }
+
     .item a {
       cursor: pointer;
       opacity: .95;
@@ -131,10 +141,11 @@ section.contact {
   }
 }
 footer {
+  font-size: 0.8rem;
   color: $white;
   width: 100%;
   text-align: center;
-  padding: 0.6rem 0;
+  padding: 0.3rem 0;
   background: -moz-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
   background: -ms-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
   background: -webkit-linear-gradient(-29deg,#c10f41 0,#4a3677 100%);
