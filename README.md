@@ -1,4 +1,4 @@
-# eact-ssr
+# react-ssr
 webpack+router4+webpack-dev-server
 
 webpack-dev-server,express
